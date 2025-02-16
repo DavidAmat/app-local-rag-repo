@@ -1,0 +1,274 @@
+imported_objects: []
+imports:
+- imported_objects:
+  - USERS_STAFF
+  imports:
+  - imported_objects:
+    - user_ids_staff
+    imports: []
+    name: widget_framework/data/users_staff.py
+  name: widget_framework/constants.py
+- imported_objects:
+  - ExperimentString
+  imports:
+  - imported_objects:
+    - Utils
+    imports:
+    - imported_objects:
+      - FS_MAX_RETRIES
+      - SLEEP_MS
+      - TIMEOUT_IN_MS
+      imports:
+      - imported_objects:
+        - user_ids_staff
+        imports: []
+        name: widget_framework/data/users_staff.py
+      name: widget_framework/constants.py
+    name: widget_framework/src/utils.py
+  name: widget_framework/src/experiment_string.py
+- imported_objects:
+  - UserSegmentation
+  imports:
+  - imported_objects:
+    - Utils
+    imports:
+    - imported_objects:
+      - FS_MAX_RETRIES
+      - SLEEP_MS
+      - TIMEOUT_IN_MS
+      imports:
+      - imported_objects:
+        - user_ids_staff
+        imports: []
+        name: widget_framework/data/users_staff.py
+      name: widget_framework/constants.py
+    name: widget_framework/src/utils.py
+  name: widget_framework/src/user_segmentation/user_segment.py
+- imported_objects:
+  - ContractInput
+  - Utils
+  imports:
+  - imported_objects:
+    - FS_MAX_RETRIES
+    - SLEEP_MS
+    - TIMEOUT_IN_MS
+    imports:
+    - imported_objects:
+      - user_ids_staff
+      imports: []
+      name: widget_framework/data/users_staff.py
+    name: widget_framework/constants.py
+  name: widget_framework/src/utils.py
+- imported_objects:
+  - WidgetContent
+  imports:
+  - imported_objects:
+    - BYO_WIDGET_ID
+    - MAP_FILTER_NAMES
+    imports:
+    - imported_objects:
+      - user_ids_staff
+      imports: []
+      name: widget_framework/data/users_staff.py
+    name: widget_framework/constants.py
+  - imported_objects:
+    - ContractInput
+    - Utils
+    imports:
+    - imported_objects:
+      - FS_MAX_RETRIES
+      - SLEEP_MS
+      - TIMEOUT_IN_MS
+      imports:
+      - imported_objects:
+        - user_ids_staff
+        imports: []
+        name: widget_framework/data/users_staff.py
+      name: widget_framework/constants.py
+    name: widget_framework/src/utils.py
+  name: widget_framework/src/widget_content/widget_content.py
+- imported_objects:
+  - WidgetRanker
+  imports:
+  - imported_objects:
+    - BUFFER_NUM_WIDGETS
+    imports:
+    - imported_objects:
+      - user_ids_staff
+      imports: []
+      name: widget_framework/data/users_staff.py
+    name: widget_framework/constants.py
+  - imported_objects:
+    - ExperimentString
+    imports:
+    - imported_objects:
+      - Utils
+      imports:
+      - imported_objects:
+        - FS_MAX_RETRIES
+        - SLEEP_MS
+        - TIMEOUT_IN_MS
+        imports:
+        - imported_objects:
+          - user_ids_staff
+          imports: []
+          name: widget_framework/data/users_staff.py
+        name: widget_framework/constants.py
+      name: widget_framework/src/utils.py
+    name: widget_framework/src/experiment_string.py
+  - imported_objects:
+    - UNDEF_STR
+    - ClassGroups
+    - ContractInput
+    - FactoryGroups
+    - ParsedContractInput
+    - Utils
+    imports:
+    - imported_objects:
+      - FS_MAX_RETRIES
+      - SLEEP_MS
+      - TIMEOUT_IN_MS
+      imports:
+      - imported_objects:
+        - user_ids_staff
+        imports: []
+        name: widget_framework/data/users_staff.py
+      name: widget_framework/constants.py
+    name: widget_framework/src/utils.py
+  - imported_objects:
+    - WidgetCompeting
+    imports:
+    - imported_objects:
+      - ClassGroups
+      - ContractInput
+      - Utils
+      imports:
+      - imported_objects:
+        - FS_MAX_RETRIES
+        - SLEEP_MS
+        - TIMEOUT_IN_MS
+        imports:
+        - imported_objects:
+          - user_ids_staff
+          imports: []
+          name: widget_framework/data/users_staff.py
+        name: widget_framework/constants.py
+      name: widget_framework/src/utils.py
+    - imported_objects:
+      - BasePolicy
+      imports:
+      - imported_objects:
+        - ContractInput
+        - Utils
+        imports:
+        - imported_objects:
+          - FS_MAX_RETRIES
+          - SLEEP_MS
+          - TIMEOUT_IN_MS
+          imports:
+          - imported_objects:
+            - user_ids_staff
+            imports: []
+            name: widget_framework/data/users_staff.py
+          name: widget_framework/constants.py
+        name: widget_framework/src/utils.py
+      - imported_objects:
+        - FakeFeatureStore
+        imports: []
+        name: widget_framework/src/widget_competing/fake_feature_store.py
+      - imported_objects:
+        - ThompsonSampling
+        imports: []
+        name: widget_framework/src/widget_competing/thompson_sampling.py
+      name: widget_framework/src/widget_competing/policies.py
+    - imported_objects:
+      - PolicyFactory
+      imports:
+      - imported_objects:
+        - ContractInput
+        imports:
+        - imported_objects:
+          - FS_MAX_RETRIES
+          - SLEEP_MS
+          - TIMEOUT_IN_MS
+          imports:
+          - imported_objects:
+            - user_ids_staff
+            imports: []
+            name: widget_framework/data/users_staff.py
+          name: widget_framework/constants.py
+        name: widget_framework/src/utils.py
+      - imported_objects:
+        - EpsilonGreedyPolicy
+        imports:
+        - imported_objects:
+          - BasePolicy
+          imports:
+          - imported_objects:
+            - ContractInput
+            - Utils
+            imports:
+            - imported_objects:
+              - FS_MAX_RETRIES
+              - SLEEP_MS
+              - TIMEOUT_IN_MS
+              imports:
+              - imported_objects:
+                - user_ids_staff
+                imports: []
+                name: widget_framework/data/users_staff.py
+              name: widget_framework/constants.py
+            name: widget_framework/src/utils.py
+          - imported_objects:
+            - FakeFeatureStore
+            imports: []
+            name: widget_framework/src/widget_competing/fake_feature_store.py
+          - imported_objects:
+            - ThompsonSampling
+            imports: []
+            name: widget_framework/src/widget_competing/thompson_sampling.py
+          name: widget_framework/src/widget_competing/policies.py
+        name: widget_framework/src/widget_competing/epsilong_greedy.py
+      - imported_objects:
+        - BasePolicy
+        - DynamicSegmentsPolicy
+        - EpsilonGreedyDoWPolicy
+        - PureThompsonSamplingPolicy
+        - RandomPolicy
+        imports:
+        - imported_objects:
+          - ContractInput
+          - Utils
+          imports:
+          - imported_objects:
+            - FS_MAX_RETRIES
+            - SLEEP_MS
+            - TIMEOUT_IN_MS
+            imports:
+            - imported_objects:
+              - user_ids_staff
+              imports: []
+              name: widget_framework/data/users_staff.py
+            name: widget_framework/constants.py
+          name: widget_framework/src/utils.py
+        - imported_objects:
+          - FakeFeatureStore
+          imports: []
+          name: widget_framework/src/widget_competing/fake_feature_store.py
+        - imported_objects:
+          - ThompsonSampling
+          imports: []
+          name: widget_framework/src/widget_competing/thompson_sampling.py
+        name: widget_framework/src/widget_competing/policies.py
+      name: widget_framework/src/widget_competing/policy_factory.py
+    name: widget_framework/src/widget_competing/widget_competing.py
+  - imported_objects:
+    - get_example_test
+    imports: []
+    name: widget_framework/src/examples/example_test_v2.py
+  name: widget_framework/src/widget_ranking/widget_ranker.py
+- imported_objects:
+  - get_example_v2
+  imports: []
+  name: widget_framework/src/examples/example_v2.py
+name: widget_framework/src/widget_builder.py

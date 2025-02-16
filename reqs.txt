@@ -1,0 +1,33 @@
+
+# Project
+pyyaml
+
+https://github.com/vamsid07/LocalRAG/blob/main/requirements.txt
+streamlit
+langchain
+langchain-ollama
+langchain-nvidia-ai-endpoints
+langchain-community
+langchain-core
+faiss-cpu
+pypdf
+python-dotenv
+requests
+
+# https://github.com/kaymen99/local-rag-researcher-deepseek/blob/main/requirements.txt
+langgraph
+langchain-core
+langchain_openai
+langchain_experimental
+langchain_text_splitters
+langchain_huggingface
+langchain_chroma
+chroma
+unstructured
+python-dotenv
+tavily-python
+ollama
+streamlit
+streamlit_nested_layout
+pdfplumber
+pyperclip

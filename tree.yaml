@@ -1,0 +1,489 @@
+files:
+- .dockerignore
+- .gitignore
+- Dockerfile
+- README.md
+- __init__.py
+- api.py
+- constants.py
+- contract_negotiation.py
+- data_loader.py
+- mapper.py
+- metadata.json
+- poetry.lock
+- poetry.lock_bk
+- precomputed_setup.py
+- project_types.py
+- pyproject.toml
+- requirements.txt
+- template_version.txt
+folders:
+- files:
+  - settings.json
+  folders: []
+  name: .vscode
+- files:
+  - entrypoint
+  folders: []
+  name: bin
+- files:
+  - README.md
+  folders:
+  - files:
+    - config_simulator.yaml
+    - config_synthetic.yaml
+    - config_synthetic_gaussian.yaml
+    - config_versions.yaml
+    - configuration.py
+    folders: []
+    name: config
+  - files: []
+    folders:
+    - files:
+      - 00-poc-viz.ipynb
+      - 01-poc-etl-s3.ipynb
+      - 02-poc-bcn-eda.ipynb
+      - 03-poc-data-insights.ipynb
+      - 04-poc-user-segmentation.ipynb
+      - 05-segmentation-ortools.ipynb
+      - 06-segmentation-kmeans.ipynb
+      - 07-volumetries-per-date-widget.ipynb
+      - 08-poc-ground-truth.ipynb
+      folders:
+      - files:
+        - v1-00-segmentation.ipynb
+        - v1-01-ground-truth.ipynb
+        - v1-02-simulator.ipynb
+        - v2-00-segmentation.ipynb
+        - v2-02-simulator.ipynb
+        - v4-00-segmentation.ipynb
+        - v4-02-simulator.ipynb
+        folders: []
+        name: simulator
+      name: poc
+    - files: []
+      folders:
+      - files:
+        - 01-cluster-v11.ipynb
+        - 02-cluster-v41.ipynb
+        - 02-cluster-v42.ipynb
+        folders: []
+        name: clusterings
+      - files:
+        - 02-s3-read-etl-segmentation.ipynb
+        folders: []
+        name: segmentation
+      name: prod
+    name: notebooks
+  - files:
+    - utils_plot.py
+    folders: []
+    name: plot_settings
+  - files: []
+    folders:
+    - files:
+      - store_wall_ground_truth.sql
+      - users_basic_features.sql
+      - widgets_ground_truth.sql
+      folders: []
+      name: ground_truth
+    - files:
+      - store_wall_etl_simulator_volume.sql
+      - users_segment_etl_simulator_volume.sql
+      - widgets_etl_simulator_volume.sql
+      folders: []
+      name: sql_checks
+    - files: []
+      folders:
+      - files:
+        - v1_q1.sql
+        - v1_q2.sql
+        - v1_q3.sql
+        - v1_q4.sql
+        - v1_q5.sql
+        folders: []
+        name: v1
+      - files:
+        - '[user]raw_segmentation_v1.sql'
+        - '[user]segmentation_v1_query1.sql'
+        - '[user]segmentation_v1_query2.sql'
+        - '[user]segmentation_v1_query3.sql'
+        - '[user]segmentation_v1_query4.sql'
+        - '[user]segmentation_v1_query5.sql'
+        folders: []
+        name: v1_user_level
+      - files:
+        - store_wall_user_volumetries.sql
+        - widget_user_volumetries.sql
+        folders: []
+        name: v2
+      name: user_segmentations
+    name: sql
+  - files:
+    - aws_utils.py
+    - utils.py
+    folders:
+    - files:
+      - reporter.py
+      - segmentation_preprocess_old.py
+      - segmentation_v2_preprocess.py
+      - segmentator.py
+      folders: []
+      name: archive
+    - files:
+      - app.py
+      - app_debug.py
+      - app_synthetic.py
+      - etl_single_version.py
+      - plot_utils.py
+      - plots_single_version.py
+      - run_dash_simulator.sh
+      - run_dash_synthetic.sh
+      folders:
+      - files:
+        - styles.css
+        - styles_synthetic.css
+        folders: []
+        name: assets
+      name: dashboarding
+    - files:
+      - etl_ground_truth.py
+      - etl_segmentation.py
+      folders: []
+      name: etl_dp
+    - files:
+      - s3_read_ground_truth.py
+      - s3_read_segmentation.py
+      folders: []
+      name: etl_s3
+    - files:
+      - logging.py
+      folders: []
+      name: monitoring
+    - files:
+      - ground_truth_base_preprocess.py
+      - ground_truth_segment_preprocess.py
+      - ground_truth_synthetic_data.py
+      - ground_truth_synthetic_data_gaussian.py
+      - ground_truth_users_preprocess.py
+      - segmentation_preprocess.py
+      folders:
+      - files:
+        - segmentation_clusterers.py
+        folders: []
+        name: clusterers
+      name: preprocessors
+    - files:
+      - environment.py
+      - ground_truth.py
+      - policies.py
+      - simulator.py
+      - simulator_synthetic.py
+      folders: []
+      name: simulator
+    - files:
+      - config.py
+      - constants.py
+      - etl_competing_carousels.py
+      - kafka_producer.py
+      - training_widget_metrics.py
+      folders:
+      - files:
+        - homepage_widget_metrics_date.sql
+        - homepage_widget_metrics_latest.sql
+        - storewall_widget_metrics_date.sql
+        - storewall_widget_metrics_latest.sql
+        - storewall_widget_metrics_max_date.sql
+        folders: []
+        name: sql
+      name: training
+    - files:
+      - commons.py
+      - workflow_etl_simulator.py
+      folders: []
+      name: workflows
+    name: src
+  name: competing_widgets
+- files:
+  - README.md
+  - __init__.py
+  - model_info.yml
+  - v1_rfl.yaml
+  - v2.yaml
+  - v3.yaml
+  - v4_dev.yaml
+  - v5.yaml
+  - versions.yaml
+  folders:
+  - files:
+    - topbrands_temp.yaml
+    - v3_dev.yaml
+    - v4_dev.yaml
+    - v5_cc.yaml
+    folders:
+    - files:
+      - cc_v1.yaml
+      - cc_v2.yaml
+      - v5.yaml
+      folders: []
+      name: cc
+    name: debug
+  - files:
+    - v3.yaml
+    - v5.yaml
+    folders: []
+    name: legacy
+  - files:
+    - v0_test.yaml
+    - v2_test.yaml
+    - v5_cc_test.yaml
+    - v5_dow_greedy_test.yaml
+    folders: []
+    name: test
+  name: config
+- files:
+  - input.avsc
+  - output.avsc
+  folders: []
+  name: contracts
+- files:
+  - api.json
+  - users_staff.py
+  folders: []
+  name: data
+- files: []
+  folders:
+  - files: []
+    folders:
+    - files:
+      - service.yaml
+      folders: []
+      name: base
+    - files:
+      - cd-version.yaml
+      - cd.yaml
+      - config.yaml
+      - envs.yaml
+      - secrets.yaml
+      folders:
+      - files:
+        - .gitkeep
+        folders: []
+        name: resources
+      name: prod
+    - files:
+      - cd-version.yaml
+      - cd.yaml
+      - config.yaml
+      - envs.yaml
+      - secrets.yaml
+      folders:
+      - files:
+        - .gitkeep
+        folders: []
+        name: resources
+      name: stage
+    name: kubernetes
+  name: deployment
+- files:
+  - __init__.py
+  - base_estimator.py
+  - variant001_estimator.py
+  folders: []
+  name: estimators
+- files: []
+  folders:
+  - files:
+    - main.tf
+    - provider.tf
+    folders: []
+    name: prod
+  - files:
+    - main.tf
+    - provider.tf
+    folders: []
+    name: stage
+  - files:
+    - main.tf
+    - provider.tf
+    folders: []
+    name: training
+  name: infrastructure
+- files:
+  - cleanup_precomputed_data.groovy
+  - deployment.groovy
+  - jobs_loader_mlp-jenkins-main.groovy
+  - jobs_loader_mlp-jks-deploy.groovy
+  - load_test.groovy
+  - new_commit.groovy
+  - precomputed_deployment.groovy
+  folders: []
+  name: jenkins
+- files:
+  - logging.py
+  - notifier.py
+  folders: []
+  name: monitoring
+- files: []
+  folders:
+  - files:
+    - utils_debug.py
+    folders:
+    - files:
+      - api.ipynb
+      folders:
+      - files:
+        - api_v2.ipynb
+        folders: []
+        name: archive
+      name: api
+    - files:
+      - plot_beta_distrib.py
+      folders:
+      - files:
+        - cc_exp_monitors.ipynb
+        - cc_fs.ipynb
+        - cc_mab.ipynb
+        - cc_run.ipynb
+        - plot_utils.py
+        - utils_inference.py
+        folders:
+        - files:
+          - cc_debug.ipynb
+          - cc_run_segmentation.ipynb
+          - cc_run_v3.ipynb
+          - cc_run_v4_dev.ipynb
+          - cc_run_v5_cc_test.ipynb
+          - cc_test.ipynb
+          folders: []
+          name: archive
+        - files:
+          - my_widget_data.sql
+          folders: []
+          name: sql
+        name: inference
+      - files:
+        - logs_visualizer.ipynb
+        folders: []
+        name: logs
+      - files:
+        - cc_training_debug.ipynb
+        - cc_training_run.ipynb
+        folders: []
+        name: training
+      - files:
+        - cc_run.ipynb
+        folders: []
+        name: widget_builder
+      name: competing_carousels
+    - files:
+      - csv_to_parquet.ipynb
+      folders: []
+      name: data
+    - files:
+      - debug_feature_store_cc.ipynb
+      folders: []
+      name: feature_store
+    - files:
+      - widget_builder_debug.ipynb
+      - widget_builder_v0_test.ipynb
+      - widget_builder_v1_rfl.ipynb
+      - widget_builder_v2.ipynb
+      - widget_builder_v2_test.ipynb
+      - widget_builder_v5_cc.ipynb
+      - widget_builder_v5_cc_test.ipynb
+      folders: []
+      name: widget_builder
+    name: debug
+  - files:
+    - debug_env_stage_fs.ipynb
+    - poc-00-create_features.ipynb
+    - poc-01-local-latencies-top_city_stores.ipynb
+    folders: []
+    name: poc
+  - files:
+    - RFL_RFB_DDP.ipynb
+    - RFL_RFB_FS.ipynb
+    - hex_res7-key-FS.ipynb
+    folders: []
+    name: production
+  name: notebooks
+- files:
+  - benchmark_intersect_available_stores.py
+  - loadtest.py
+  - measure_latency_api_fs.py
+  - run_manual_api.py
+  - run_manual_api_dev.py
+  folders: []
+  name: scripts
+- files:
+  - __init__.py
+  - experiment_string.py
+  - line_profile.prof
+  - line_profiler.py
+  - stats_profiler.tsv
+  - utils.py
+  - widget_builder.py
+  folders:
+  - files:
+    - example_test_v1.py
+    - example_test_v2.py
+    - example_v1.py
+    - example_v2.py
+    - example_v3.py
+    - example_v4_dev.py
+    - example_v5_cc.py
+    - example_v5_dow_greedy_cc.py
+    folders: []
+    name: examples
+  - files:
+    - starburst_reader.py
+    folders: []
+    name: io
+  - files:
+    - user_segment.py
+    folders: []
+    name: user_segmentation
+  - files:
+    - epsilong_greedy.py
+    - fake_feature_store.py
+    - policies.py
+    - policy_factory.py
+    - thompson_sampling.py
+    - widget_competing.py
+    folders: []
+    name: widget_competing
+  - files:
+    - dummy_profiler.py
+    - dummy_profiler.py.lprof
+    - fs_dummy.py
+    - widget_content.py
+    - widget_content.py.lprof
+    folders: []
+    name: widget_content
+  - files:
+    - prova.py
+    - widget_ranker.py
+    folders: []
+    name: widget_ranking
+  name: src
+- files:
+  - test_api.py
+  folders:
+  - files:
+    - checks_v2.py
+    folders: []
+    name: examples_checks
+  - files:
+    - test_base_policy.py
+    - test_egreedy_dow_policy.py
+    folders: []
+    name: policies
+  name: tests
+- files:
+  - generate_training_manifests.py
+  - precompute_predictions.py
+  - training_competing_carousels.py
+  folders: []
+  name: workflows
+name: widget_framework
