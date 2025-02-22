@@ -1,0 +1,54 @@
+!!python/object/apply:collections.defaultdict
+args:
+- !!python/name:builtins.list ''
+dictitems:
+  inference:
+  - "Attribute(\n    value=Name(\n        value='widget_framework',\n        lpar=[],\n\
+    \        rpar=[],\n    ),\n    attr=Name(\n        value='src',\n        lpar=[],\n\
+    \        rpar=[],\n    ),\n    dot=Dot(\n        whitespace_before=SimpleWhitespace(\n\
+    \            value='',\n        ),\n        whitespace_after=SimpleWhitespace(\n\
+    \            value='',\n        ),\n    ),\n    lpar=[],\n    rpar=[],\n).WidgetBuilder"
+  local_app:
+  - "Attribute(\n    value=Name(\n        value='py_kit',\n        lpar=[],\n    \
+    \    rpar=[],\n    ),\n    attr=Name(\n        value='core',\n        lpar=[],\n\
+    \        rpar=[],\n    ),\n    dot=Dot(\n        whitespace_before=SimpleWhitespace(\n\
+    \            value='',\n        ),\n        whitespace_after=SimpleWhitespace(\n\
+    \            value='',\n        ),\n    ),\n    lpar=[],\n    rpar=[],\n).Metrics.statsd_from_env"
+  - "Name(\n    value='glovo_mlp_coreutils',\n    lpar=[],\n    rpar=[],\n).get_training_logger"
+  - "Attribute(\n    value=Name(\n        value='py_kit',\n        lpar=[],\n    \
+    \    rpar=[],\n    ),\n    attr=Name(\n        value='core',\n        lpar=[],\n\
+    \        rpar=[],\n    ),\n    dot=Dot(\n        whitespace_before=SimpleWhitespace(\n\
+    \            value='',\n        ),\n        whitespace_after=SimpleWhitespace(\n\
+    \            value='',\n        ),\n    ),\n    lpar=[],\n    rpar=[],\n).get_tracer"
+  - "Attribute(\n    value=Name(\n        value='widget_framework',\n        lpar=[],\n\
+    \        rpar=[],\n    ),\n    attr=Name(\n        value='src',\n        lpar=[],\n\
+    \        rpar=[],\n    ),\n    dot=Dot(\n        whitespace_before=SimpleWhitespace(\n\
+    \            value='',\n        ),\n        whitespace_after=SimpleWhitespace(\n\
+    \            value='',\n        ),\n    ),\n    lpar=[],\n    rpar=[],\n).Utils.read_avro_contract"
+  - "Attribute(\n    value=Name(\n        value='glovo_mlp_core',\n        lpar=[],\n\
+    \        rpar=[],\n    ),\n    attr=Name(\n        value='api',\n        lpar=[],\n\
+    \        rpar=[],\n    ),\n    dot=Dot(\n        whitespace_before=SimpleWhitespace(\n\
+    \            value='',\n        ),\n        whitespace_after=SimpleWhitespace(\n\
+    \            value='',\n        ),\n    ),\n    lpar=[],\n    rpar=[],\n).api"
+  production_app:
+  - "Attribute(\n    value=Name(\n        value='py_kit',\n        lpar=[],\n    \
+    \    rpar=[],\n    ),\n    attr=Name(\n        value='core',\n        lpar=[],\n\
+    \        rpar=[],\n    ),\n    dot=Dot(\n        whitespace_before=SimpleWhitespace(\n\
+    \            value='',\n        ),\n        whitespace_after=SimpleWhitespace(\n\
+    \            value='',\n        ),\n    ),\n    lpar=[],\n    rpar=[],\n).Metrics.statsd_from_env"
+  - "Name(\n    value='glovo_mlp_coreutils',\n    lpar=[],\n    rpar=[],\n).get_training_logger"
+  - "Attribute(\n    value=Name(\n        value='py_kit',\n        lpar=[],\n    \
+    \    rpar=[],\n    ),\n    attr=Name(\n        value='core',\n        lpar=[],\n\
+    \        rpar=[],\n    ),\n    dot=Dot(\n        whitespace_before=SimpleWhitespace(\n\
+    \            value='',\n        ),\n        whitespace_after=SimpleWhitespace(\n\
+    \            value='',\n        ),\n    ),\n    lpar=[],\n    rpar=[],\n).get_tracer"
+  - "Attribute(\n    value=Name(\n        value='widget_framework',\n        lpar=[],\n\
+    \        rpar=[],\n    ),\n    attr=Name(\n        value='src',\n        lpar=[],\n\
+    \        rpar=[],\n    ),\n    dot=Dot(\n        whitespace_before=SimpleWhitespace(\n\
+    \            value='',\n        ),\n        whitespace_after=SimpleWhitespace(\n\
+    \            value='',\n        ),\n    ),\n    lpar=[],\n    rpar=[],\n).Utils.read_avro_contract"
+  - "Attribute(\n    value=Name(\n        value='glovo_mlp_core',\n        lpar=[],\n\
+    \        rpar=[],\n    ),\n    attr=Name(\n        value='api',\n        lpar=[],\n\
+    \        rpar=[],\n    ),\n    dot=Dot(\n        whitespace_before=SimpleWhitespace(\n\
+    \            value='',\n        ),\n        whitespace_after=SimpleWhitespace(\n\
+    \            value='',\n        ),\n    ),\n    lpar=[],\n    rpar=[],\n).api"
